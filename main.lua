@@ -1,10 +1,10 @@
 -- BASIC SYNTAX & VARIABLES --
 print("Hello World!")
 -- This is a comment
-a, b = 10, 20 -- Similar to Python, types are not needed
+local a, b = 10, 20 -- Similar to Python, types are not needed
 print(type(a)) -- "number" is the data type for both ints and doubles
 print(type(true) .. type(nil)) -- Use .. to concat strings
-string1 = "chat"
+local string1 = "chat"
 print("hi",string1) -- Will auto space, be careful
 
 -- CONDITIONS & LOOPS --
@@ -37,7 +37,7 @@ until(a > b * 2 and a < 49)
 -- TABLES AND INPUT --
 
 -- Tables are like Python lists/dicts, used for like everything lol
-tab = {1, 2, 3}
+local tab = {1, 2, 3}
 print(tab[1]) -- Tables are 1 indexed :sob:
 
 tab[-1] = 0 -- Negative indexes are not the back of a table
@@ -47,10 +47,12 @@ print(tab[3])
 tab["wow"] = "tacocat" -- Strings can be used as indexes
 print(tab["wow"])
 
-
-
-
-
+print("enter key:")
+local key = io.read() -- Reads the line of input
+print("enter value:")
+local value = io.read()
+tab[key] = value
+print(tab[key])
 
 
 
